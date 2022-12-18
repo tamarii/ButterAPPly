@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Cities search</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.1/font/bootstrap-icons.css"
+    />
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+
+    <!-- fonts: -->
+    <!-- Dancing Script -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Roboto: -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Iconscout Link For Icons -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+
+    <!-- my css -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body
+    style="
+      background-image: linear-gradient(
+        200deg,
+        #f2f2f2,
+        #86fde780,
+        #acb6e56e,
+        #acb6e56e
+      );
+    "
+  >
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg py-3 d-flex fixed-top">
+      <div class="container">
+        <img class="logo" src="logo.jpg" alt="logo" />
+        <a href="index.html" class="navbar-brand">ButterAPPly</a>
+
+        <button
+          style="background-color: white"
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home |</a>
+            </li>
+            <li class="nav-item">
+              <a href="colorPicker.html" class="nav-link">Color picker |</a>
+            </li>
+            <li class="nav-item">
+              <a href="search.html" class="nav-link">Cities search |</a>
+            </li>
+            <li class="nav-item">
+              <a href="animals.html" class="nav-link">Animal race |</a>
+            </li>
+            <li class="nav-item">
+              <a href="cards.html" class="nav-link">War card game |</a>
+            </li>
+            <li class="nav-item">
+              <a href="people.html" class="nav-link">Rich people |</a>
+            </li>
+            <li class="nav-item">
+              <a href="todoTask.html" class="nav-link">ToDo manager |</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- the search tab -->
+    <section class="searching mt-5 pt-5 text-center">
+      <h1 class="mb-5 mt-5">Cities in Israel</h1>
+      <div class="containerSearch text-center">
+        <span>Type the city</span>
+        <i class="uil uil-angle-down"></i>
+      </div>
+      <div class="searchContent">
+        <div class="search">
+          <i class="uil uil-search"></i>
+          <input spellcheck="false" type="text" placeholder="Search" />
+        </div>
+        <ul class="options"></ul>
+      </div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+      integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+      integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/search.js"></script>
+  </body>
+</html>

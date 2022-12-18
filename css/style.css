@@ -1,0 +1,497 @@
+
+/* general */
+*, *::after, *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+/*   display: flex; */
+  height: 100vh;
+  background: #000;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+h1{
+  font-family: 'Dancing Script', cursive;
+  font-size: 3rem;
+  color: #f2f2f2;
+}
+
+/* navbar */
+.navbar {
+  width: 100vw;
+  background-image: linear-gradient(180deg, #000, #000,#000, #f2f2f2);
+}
+
+.nav-link {
+  color: #f2f2f2;
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.nav-link:hover {
+  color: #f2f2f2;
+  background-color: #d89cad93;
+  border-radius: 5px;
+}
+.nav-link:active {
+  background-color: #6ce2f0;
+}
+
+.logo {
+  height: 48px;
+  padding: 2px 10px;
+}
+
+.navbar-brand {
+  font-size: 1.2rem;
+  font-family: "ariel", sans-serif;
+  color: #f2f2f2;
+  font-weight: bold;
+}
+
+.navbar-brand:hover{
+  color: pink;
+}
+
+
+
+/* buttons-homePage */
+
+button.rainbow{
+  position: relative;
+  height: 60px;
+  width: 200px;
+  margin: 20px;
+  border: none;
+  outline: none;
+  color: white;
+  background-image: linear-gradient(-45deg, #000,#111);
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+}
+button.rainbow:before{
+  position: absolute;
+  content: '';
+  top: -2px;
+  left: -2px;
+  height: calc(100% + 4px);
+  width: calc(100% + 4px);
+  border-radius: 5px;
+  z-index: -1;
+  opacity: 0;
+  filter: blur(5px);
+  background: linear-gradient(45deg, #e292ce, #fab5d2, #faf3e4, #d8ebd0, #00ffd5, #88ccbf, #bd9ce0,  #e292ce, #fab5d2, #faf3e4, #d8ebd0, #00ffd5);
+  background-size: 400%;
+  transition: opacity .3s ease-in-out;
+  animation: animate 20s linear infinite;
+}
+button.rainbow:hover:before{
+  opacity: 1;
+}
+button.rainbow:hover:active{
+  background: none;
+}
+button.rainbow:hover:active:before{
+  filter: blur(2px);
+}
+@keyframes animate {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+button.rainbow a{
+  text-decoration: none;
+  color: #faf3e4;
+}
+
+
+/* cards game */
+
+.section.cardsec{
+  display: grid;
+  grid-template-columns: repeat(2,8rem);
+  grid-template-rows: 7rem 14rem 4rem 14rem;
+  gap: .5rem;
+  cursor: pointer;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.deck{
+  height: 100%;
+  width: 100%;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  border-radius: .5rem;
+  color: white;
+  user-select: none;
+}
+
+.computer-deck{
+  background-color: #bd9ce0;
+}
+.player-deck{
+  background-color: #6ce2f0;
+}
+
+.text{
+  grid-column: span 2;
+  color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.headText{
+  grid-column: span 2;
+}
+
+.headText h1{
+  color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardi{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border: 1px solid white;
+  border-radius: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  background-color: white;
+}
+
+.cardi::before{
+  top: .5rem;
+  left: .5rem
+}
+
+.cardi::after{
+  bottom:.5rem;
+  right: .5rem;
+  transform: rotate(180deg);
+}
+.cardi::before, .cardi::after{
+  position: absolute;
+  content: attr(data-value);
+  font-size: 1rem;
+}
+
+.cardi.red{
+  color:red;
+}
+
+.cardi.black{
+  color:black;
+}
+
+/* colorPicker */
+small{
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.7rem;
+  
+}
+
+label{
+  font-family: Arial, Helvetica, sans-serif, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  color:#181849;
+}
+
+.containerColor h1{
+  font-size: 4rem; 
+}
+
+.cOutput{
+  font-family: 'Dancing Script', cursive;
+  font-size: 1rem;
+}
+
+.cSavded{
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  color: #aa8991 !important;
+}
+
+/* to do manager */
+
+:root{
+  --pink: #ec4899;
+  --purple: #393885;
+  --darkpurple: #181849;
+}
+
+.task-list h2{
+  font-family: Arial, sans-serif;
+  font-weight: bolder;
+  color: #f2f2f2;
+}
+.task-list h2 span{
+  font-family: 'Dancing Script', cursive;
+  color:#fbc7d4;
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+
+.inpuTask , .subbutton , .edit , .delete{
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#new-task-submit{
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--purple);
+ /*  background-image: linear-gradient(to right, var(--pink), var(--purple));-webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+
+#new-task-submit:hover{
+  opacity: 0.8;
+}
+#new-task-submit:active{
+  opacity: 0.5;
+}
+
+#new-task-input{
+  width:60%;
+  background-color: #3938856e;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  color: #f2f2f2;
+}
+
+#tasks .task .content .text{
+  width:100%;
+  background-color: #fbc7d473;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #f2f2f2;
+  border: none;
+  transition: 0.4s;
+  
+}
+
+
+#tasks .task .content .text:not(:read-only){
+  color: var(--pink);
+}
+
+.actions button{
+  cursor: pointer;
+  margin: 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: 0.4s;
+}
+
+.actions button:hover{
+  opacity: 0.6;
+}
+.actions button:active{
+  opacity: 0.3;
+}
+
+.actions.edit{
+
+  color: black;
+}
+
+.actions .delete{
+  color:rgb(204, 67, 94);
+}
+
+/* search tab */
+::selection{
+  color: #fff;
+  background: #4285f4;
+}
+section.searching{
+  width: 30rem;
+  margin: 85px auto 0;
+}
+
+.containerSearch, li{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.containerSearch{
+  height: 65px;
+  padding: 0 20px;
+  font-size: 22px;
+  font-weight:500;
+  color: #393885;
+  background: #fff;
+  border-radius: 25px;
+  justify-content: space-between;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.containerSearch i{
+  font-size: 31px;
+  transition: transform 0.3s linear;
+}
+.searching.active .containerSearch i{
+  transform: rotate(-180deg);
+}
+.searchContent{
+  display: none;
+  padding: 20px;
+  margin-top: 15px;
+  background: #fff;
+  border-radius: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+.searching.active .searchContent{
+  display: block;
+}
+.searchContent .search{
+  position: relative;
+}
+.search i{
+  top: 50%;
+  left: 15px;
+  color: #999;
+  font-size: 20px;
+  pointer-events: none;
+  transform: translateY(-50%);
+  position: absolute;
+}
+.search input{
+  height: 50px;
+  width: 100%;
+  outline: none;
+  font-size: 17px;
+  border-radius: 25px;
+  padding: 0 20px 0 43px;
+  border: 1px solid #B3B3B3;
+}
+.search input:focus{
+  padding-left: 42px;
+  border: 2px solid #49a191;
+}
+.search input::placeholder{
+  color: #bfbfbf;
+}
+.searchContent .options{
+  margin-top: 10px;
+  max-height: 250px;
+  overflow-y: auto;
+  padding-right: 7px;
+}
+.options::-webkit-scrollbar{
+  width: 7px;
+}
+.options::-webkit-scrollbar-track{
+  background: #f1f1f1;
+  border-radius: 25px;
+}
+.options::-webkit-scrollbar-thumb{
+  background: #ccc;
+  border-radius: 25px;
+}
+.options::-webkit-scrollbar-thumb:hover{
+  background: #b3b3b3;
+}
+.options li{
+  height: 50px;
+  padding: 0 13px;
+  font-size: 21px;
+  font-weight:500;
+  color: #393885;
+}
+.options li:hover, li.selected{
+  border-radius: 25px;
+  background: #3938853d;
+}
+
+
+
+/* animals race */
+.animal-show-case img {
+  width: 100px;
+  z-index: 5000;
+}
+
+.chosen-animal {
+  border-radius: 8px;
+  border: 3px dashed dodgerblue;
+}
+
+table {
+  height: 50vh;
+  width: 100vh;
+}
+
+table td {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+table tr {
+  border-bottom: #000 1px solid;
+  width: 100%;
+}
+
+.finishLine {
+  margin-top: 1px;
+  height: 550px;
+  border-left: 5px dashed red;
+  position: absolute;
+  z-index: 300;
+  margin-left: 880px;
+}
+
+.amimalcontainer h2{
+  font-family: 'Dancing Script', cursive;
+  color:rgb(51, 48, 48);
+  font-size: 2rem;
+}
+
+.amimalcontainer p{
+  font-family:Arial, Helvetica, sans-serif;
+  color:white;
+  font-size: 1rem;
+}
+
+.amimalcontainer p.bold{
+  font-weight: bolder;
+  border:white 1px solid ;
+  border-radius: 10px;
+  padding: 0.5rem;
+  width: 45rem;
+}
+
+.amimalcontainer{
+  margin-left: 3rem;
+}
